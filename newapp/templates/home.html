@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>멋사대학교 동아리를 소개합니다</h1>
+    <div>
+        <a href="{% url 'new'%}">글쓰기</a>
+    </div>
+    <div class="container">
+    {% for newapp in newapps%}
+        <div>
+        <h3><a href = "{%url 'detail' newapp.id %}">{{newapp.title}}</a></h3>
+        <br>
+        </div>
+    {% endfor %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{newapp.title}}</h2>
+<div>
+동아리 소개: {{newapp.intro}}
+<br>
+인원: {{newapp.head}}명
+</div>
+<a href="{% url 'edit' newapp.id %}">수정하기</a>
+<a href="{% url 'delete' newapp.id %}">삭제하기</a>
+
+
+</form>
+{% endblock %}
